@@ -85,7 +85,6 @@ const styles = StyleSheet.create({
     height: 200,
     resizeMode: 'cover',
     borderRadius: 12,
-    // ensure the image corners are clipped inside the wrapper
     overflow: 'hidden',
   },
   title: {
