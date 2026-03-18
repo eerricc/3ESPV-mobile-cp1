@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Image, Switch} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image, Switch } from 'react-native';
 import Button from './components/Button';
 
 export default function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [remember, setRemember] = useState(false);
-
-  const onLogin = () => {
-    alert(`Email: ${email}\nSenha: ${password}\nLembrar: ${remember ? 'Sim' : 'Não'}`);
-  };
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <View style={styles.container}>
@@ -34,22 +30,22 @@ export default function App() {
         <TextInput
           style={styles.input}
           placeholder="Senha"
-          value={password}
           onChangeText={setPassword}
-          secureTextEntry
+          value={password}
+          secureTextEntry={!showPassword}
         />
 
         <View style={styles.forgotPassword}>
-          <Button title="Esqueci a Senha" onPress={() => alert('Funcionalidade de recuperação de senha não implementada.')} />
+          <Button title="Esqueci a Senha" />
         </View>
 
         <View style={styles.switchRow}>
-          <Text style={styles.switchLabel}>Lembrar de Mim</Text>
-          <Switch value={remember} onValueChange={setRemember} />
+          <Text style={styles.switchLabel}>Mostrar senha</Text>
+          <Switch value={showPassword} onValueChange={setShowPassword} />
         </View>
 
         <View style={styles.buttonContainer}>
-          <Button title="Entrar" onPress={onLogin} />
+          <Button title="Entrar" />
         </View>
       </View>
     </View>
