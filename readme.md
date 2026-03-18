@@ -36,3 +36,7 @@ Objetivo: servir como base visual para integrar autenticação posteriormente.
 - App.tsx — tela principal (formulário, estado e layout).
 - Button.tsx — componente de botão visual reutilizável.
 - banner.jpg — imagem de topo.
+
+# Preview 
+<img width="244" height="544" alt="image" src="https://github.com/user-attachments/assets/4dde6af7-05f6-4aef-83ed-bc983d67defb" />
+
