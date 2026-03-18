@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Image, Switch, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image, Switch} from 'react-native';
+import Button from './components/Button';
 
 export default function App() {
   const [email, setEmail] = useState('');
